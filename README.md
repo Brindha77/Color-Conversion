@@ -1,5 +1,7 @@
 # Color Conversion
-## AIM
+
+## AIM:
+
 To perform the color conversion between RGB, BGR, HSV, and YCbCr color models.
 
 ## Software Required:
@@ -9,29 +11,34 @@ Anaconda - Python 3.7
 ## Algorithm:
 
 ### Step1:
+
 Import cv2 and save and image as filename.jpg.
 
 ### Step2:
+
 Use imread(filename, flags) to read the file.
 
 ### Step3:
+
 Use cv2.cvtColor(src, code, dst, dstCn) to convert an image from one color space to another.
 
 ### Step4:
+
 Split and merge the image using cv2.split and cv2.merge commands.
 
 ### Step5:
+
 End the program and close the output image windows.
 
 
 
 ## Program:
-```
+
 # Developed By:R.Brindha
 # Register Number:212222230023
-```
-# i) Convert BGR and RGB to HSV and GRAY
 
+# i) Convert BGR and RGB to HSV and GRAY
+```
 import cv2
 color_image = cv2.imread('mini.jpg')
 cv2.imshow('Original image', color_image)
@@ -44,9 +51,8 @@ cv2. destroyAllWindows()
  
  ```
 
-
-```
 # ii)Convert HSV to RGB and BGR
+```
 import cv2
 color_image = cv2.imread('mini.jpg')
 cv2.imshow('Original image', color_image)
@@ -59,8 +65,9 @@ cv2. destroyAllWindows()
 
 ```
 
-```
+
 # iii)Convert RGB and BGR to YCrCb
+```
 import cv2
 color_image = cv2.imread('mini.jpg')
 cv2.imshow('Original image', color_image)
@@ -73,8 +80,9 @@ cv2. destroyAllWindows()
 
 ```
 
-```
+
 # iv)Split and Merge RGB Image
+```
 import cv2
 image = cv2.imread('mini.jpg')
 blue=image[:,:,0]
@@ -87,11 +95,10 @@ Merged_BGR=cv2.merge((blue,green,red))
 cv2.imshow('Merged BGR Image',Merged_BGR)
 cv2.waitKey(0)
 cv2.destoryAllWindows()
-
 ```
 
-```
 # v) Split and merge HSV Image
+```
 import cv2
 image = cv2.imread('plains.jpg')
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
@@ -103,29 +110,36 @@ Merged_HSV = cv2.merge((h,s,v))
 cv2.imshow('Merged HSV Image',Merged_HSV)
 cv2.waitKey(0)
 cv2.destoryAllWindows()
-
+```
 
 ## Output:
+
 ### i) BGR and RGB to HSV and GRAY
+
 ![](./1.jpg)
 ![](./2.png)
 ![](./3.png)
 
 ### ii) HSV to RGB and BGR
+
 ![](./1.jpg)
 ![](./4.png)
 ![](./5.png)
 
 ### iii) RGB and BGR to YCrCb
+
 ![](./1.jpg)
 ![](./6.png)
 ![](./7.png)
 
 ### iv) Split and merge RGB Image
+
 ![](./8.png)
 
 ### v) Split and merge HSV Image
+
 ![](./9.png)
 
 ## Result:
+
 Thus the color conversion was performed between RGB, HSV and YCbCr color models.
